@@ -4,16 +4,20 @@ body{
     display: flex;
     justify-content: center;
 }
-
-#newtask{
+.container{
     display: flex;
-    justify-content: center;
-    width: 217px;
-    margin: 100px 0 50px 0;
-    padding: 50px 100px;
+    width: 500px;
+    flex-direction: column;
+    margin-top: 120px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 5px 5px rgba(135, 207, 235, 0.178);
+}
+#newtask{
+    display: flex;
+    padding: 50px 0px;
+    margin: 0px;
+    justify-content: center;
 }
 input{
     padding: 0 15px;
@@ -54,14 +58,15 @@ input{
     box-shadow: 5px 5px rgba(135, 207, 235, 0.178);
 }
 .del{
-    margin-left: 205px;
+    margin-left: 220px;
     background-color: #fff;
     color: red;
     font-weight: bolder;
     border: none;
+    cursor: pointer;
 }
 h2{
-    margin: -30px 0 20px -10px;
+    margin: 20px 0 0 30px;
     font-family: monospace;
     font-size: 30px;
     color: orangered;
@@ -73,4 +78,5 @@ h2{
     color: aqua;
     font-weight: bolder;
     border: none;
+    cursor: pointer;
 }

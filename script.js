@@ -3,10 +3,13 @@ const body = document.querySelector("body");
 const container = document.createElement("div");
 container.setAttribute("class", "container");
 body.appendChild(container);
-
+const h2 = document.createElement("h2")
+h2.textContent=`To-Do-List`
+container.appendChild(h2)
 const newtask = document.createElement("div");
 newtask.setAttribute("id", "newtask");
 container.appendChild(newtask);
+
 
 const input = document.createElement("input");
 input.setAttribute("placeholder", "Task-to-be-done...");
@@ -20,9 +23,6 @@ newtask.appendChild(button);
 const tasks = document.createElement("div");
 tasks.setAttribute("id", "tasks");
 container.appendChild(tasks);
-const h2 = document.createElement("h2")
-h2.textContent=`To-Do-List`
-tasks.appendChild(h2)
 
 // ideas
 
