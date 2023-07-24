@@ -1,0 +1,76 @@
+body{
+    margin: 0;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+}
+
+#newtask{
+    display: flex;
+    justify-content: center;
+    width: 217px;
+    margin: 100px 0 50px 0;
+    padding: 50px 100px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 5px 5px rgba(135, 207, 235, 0.178);
+}
+input{
+    padding: 0 15px;
+    background-color: #fff;
+    font-size: medium;
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
+    border: 1px solid rgba(126, 126, 126, 0.4);
+    border-radius: 10px;
+    box-shadow: 3px 5px rgba(48, 48, 48, 0.178);
+}
+#push{
+    margin-left: 10px;
+    padding: 15px 23px;
+    border: 2px solid rgba(126, 126, 126, 0.4);
+    border-radius: 10px;
+    background-color: orangered;
+    color: white;
+    cursor: pointer;
+    font-size: medium;
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 3px 5px rgba(48, 48, 48, 0.178);
+}
+#tasks{
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 50px;
+    box-shadow: 5px 5px rgba(135, 207, 235, 0.178);
+}
+.task{
+    margin: 8px;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: orangered;
+    color: #fff;
+    font-weight: bolder;
+    box-shadow: 5px 5px rgba(135, 207, 235, 0.178);
+}
+.del{
+    margin-left: 205px;
+    background-color: #fff;
+    color: red;
+    font-weight: bolder;
+    border: none;
+}
+h2{
+    margin: -30px 0 20px -10px;
+    font-family: monospace;
+    font-size: 30px;
+    color: orangered;
+    font-weight: bolder;
+}
+.edit{
+    margin-left: 5px;
+    background-color: #fff;
+    color: aqua;
+    font-weight: bolder;
+    border: none;
+}
