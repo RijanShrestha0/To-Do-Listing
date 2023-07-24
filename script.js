@@ -28,7 +28,7 @@ tasks.appendChild(h2)
 
 document.querySelector('#push').onclick = function(){
     if(document.querySelector('#newtask input').value.length == 0){
-        alert("Please Enter a Task")
+        alert("Please Enter a Task");
     }else if(document.querySelector('#newtask input')){
         const task = document.createElement("div");
         task.setAttribute("class", "task");
@@ -50,5 +50,5 @@ document.querySelector('#push').onclick = function(){
         edit.setAttribute("class", "edit");
         edit.textContent=`Edit`
         task.appendChild(edit);
-    }
-}
+    };
+};
