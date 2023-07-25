@@ -1,11 +1,49 @@
 const body = document.querySelector("body");
 
-const container = document.createElement("div");
-container.setAttribute("class", "container");
-body.appendChild(container);
-const h2 = document.createElement("h2")
-h2.textContent=`To-Do-List`
-container.appendChild(h2)
+
+const outer = document.createElement("div");
+outer.setAttribute("class", "outer");
+body.appendChild(outer)
+const day =document.createElement("div");
+outer.append(day);
+const time_day = document.createElement("a");
+day.appendChild(time_day);
+
+let todaysday = new Date();
+let baar = todaysday.getDay();
+
+switch (baar) {
+    case 0:
+        baar = "Sunday";
+        break;
+
+    case 1:
+        baar = "Monday";
+        break;
+    case 2:
+       baar = "Tuesday";
+        break;
+    case 3:
+        baar = "Wednesday";
+        break;
+        case 4:
+            baar = "Thursday";
+            break;
+    case 5:
+        baar = "Friday";
+        break;
+    case 6:
+        baar = "Saturday";
+    }
+    
+    time_day.innerHTML = baar;
+    
+    const container = document.createElement("div");
+    container.setAttribute("class", "container");
+    body.appendChild(container);
+    const h2 = document.createElement("h2");
+    h2.textContent=`To-Do-List`
+container.appendChild(h2);
 const newtask = document.createElement("div");
 newtask.setAttribute("id", "newtask");
 container.appendChild(newtask);
@@ -44,11 +82,11 @@ document.querySelector('#push').onclick = function(){
         for(i=0; i<taskin.length; i++){
             taskin[i].onclick = function(){
                 this.parentElement.remove();
-            }
-        }
+            }    
+        }    
         const edit = document.createElement("button");
         edit.setAttribute("class", "edit");
         edit.textContent=`Edit`
         task.appendChild(edit);
-    };
-};
+    };    
+};    
