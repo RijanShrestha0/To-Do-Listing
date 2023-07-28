@@ -58,6 +58,38 @@ button.setAttribute("id", "push");
 button.textContent=`Add`
 newtask.appendChild(button);
 
+const time = document.createElement("div");
+time.setAttribute("class", "time");
+newtask.appendChild(time);
+const time_hour = document.createElement("div")
+time_hour.setAttribute("style", "display: inline-block")
+time_hour.setAttribute("id", "hour")
+time.appendChild(time_hour)
+
+const dots = document.createElement("a")
+dots.setAttribute("style", "font-weight:bolder;")
+time.appendChild(dots)
+
+const time_minutes = document.createElement("div")
+time_minutes.setAttribute("id", "minutes")
+time_minutes.setAttribute("style", "display: inline-block")
+time.appendChild(time_minutes)
+
+const time_second = document.createElement("div")
+time_second.setAttribute("id", "second")
+time_second.setAttribute("style", "display: inline-block")
+time.appendChild(time_second)
+
+
+setInterval(() => {
+    
+    let currenttime = new Date();
+    time_hour.innerHTML = (currenttime.getHours() <=9? "0":"") + currenttime.getHours() + ':'
+    time_minutes.innerHTML = (currenttime.getMinutes() <=9? "0":"") + currenttime.getMinutes() + ':' 
+    time_second.innerHTML = (currenttime.getSeconds() <10?"0":"") + currenttime.getSeconds(); + ':'
+}, 10);   
+
+
 const tasks = document.createElement("div");
 tasks.setAttribute("id", "tasks");
 container.appendChild(tasks);
@@ -75,8 +107,6 @@ document.querySelector('#push').onclick = function(){
         taskname.textContent=`${document.querySelector('#newtask input').value}`
         task.appendChild(taskname);
 
-        const box = document.createElement("a");
-        task.appendChild(box);
         const edit = document.createElement("button");
         edit.setAttribute("class", "edit");
         edit.textContent=`Edit`
